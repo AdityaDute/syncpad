@@ -6,6 +6,8 @@ import {YSocketIO} from 'y-socket.io/dist/server';
 const app = express();
 const httpServer = createServer(app);
 
+app.use(express.static("public"))
+
 const io = new Server(httpServer, {
     cors:{
         origin:"*",
